@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+    <form hx-get="/get_data/" hx-boost="true" hx-target="#dataContainer" hx-indicator="#indicator">
+        <label for="idInput">Enter ID:</label>
+        <input type="text" id="idInput" name="id">
+        <button type="submit">Submit</button>
+    </form>
+     <img id="indicator" class="htmx-indicator" src="./Media/load.gif" style="width: 10%">
+<div id="dataContainer" hx-swap="outerHTML">
+    <p>Initial content</p>
+</div>
+
+</body>
+</html>
